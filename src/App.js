@@ -1,7 +1,8 @@
 import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return <p className="text-6xl">asdfsadf</p>;
+  return <Body />;
 }
 
 export default App;
