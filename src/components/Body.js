@@ -13,6 +13,14 @@ const Body = () => {
       path: "/browse",
       element: <Browse />,
     },
+    {
+      path: "/about",
+      element: <Browse />,
+    },
+    {
+      path: "/contact",
+      element: <Browse />,
+    },
   ]);
 
   return <RouterProvider router={appRouter} />;
