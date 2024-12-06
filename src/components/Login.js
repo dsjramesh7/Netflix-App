@@ -14,15 +14,15 @@ const Login = () => {
   };
 
   const handleSubmitLogin = () => {
-    // console.log(email.current.value);
-    // console.log(password.current.value);
+    console.log(email.current.value);
+    console.log(password.current.value);
 
     const message = checkValidDate(
       email.current.value,
       password.current.value,
       fullName.current.value
     );
-    // console.log(message);
+    console.log(message);
     setErrorMessage(message);
   };
 
