@@ -6,6 +6,11 @@
 - routing of app
 - Login form
 - form validation
+- setup of firebase
+- deploying my app to production
+- create a sign up user account
+- implemented sign in user API
+- created redux store with userSlice
 
 # features
 
