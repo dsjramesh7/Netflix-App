@@ -32,14 +32,14 @@ const Body = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
+        // console.log("user", user);
         //for sign in
-        const { uid, email, displayName, photoURL } = user;
+        const { uid, email, displayName } = user;
         dispatch(
           addUser({
             uid: uid,
             email: email,
             displayName: displayName,
-            photoURL: photoURL,
           })
         );
       } else {

@@ -19,7 +19,7 @@ const Login = () => {
   };
   const email = useRef(null);
   const password = useRef(null);
-  const name = useRef();
+  const name = useRef(null);
 
   const handleSubmitLogin = () => {
     // console.log(email.current.value);
@@ -31,7 +31,7 @@ const Login = () => {
       password.current.value
       // name.current.value
     );
-    console.log(message);
+    // console.log(message);
     setErrorMessage(message);
 
     if (message) return;
@@ -39,7 +39,6 @@ const Login = () => {
       //sign Up form
       createUserWithEmailAndPassword(
         auth,
-        // name.current.value,
         email.current.value,
         password.current.value
       )
@@ -47,10 +46,11 @@ const Login = () => {
           const user = userCredential.user;
           // console.log(user);
           updateProfile(user, {
-            displayName: name.current?.value || "",
-            photoURL: "https://avatars.githubusercontent.com/u/84655307?v=4",
+            displayName: name.current?.value || "Guest",
+            // photoURL: "https://avatars.githubusercontent.com/u/84655307?v=4",
           })
             .then(() => {
+              console.log("navigate after update");
               navigate("/browse");
             })
             .catch((error) => {
@@ -58,9 +58,7 @@ const Login = () => {
             });
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode + " - " + errorMessage);
+          // console.log(error.code + " - " + error.message);
         });
     } else {
       // sign in form
@@ -71,13 +69,11 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+          // console.log(user);
           navigate("/browse");
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode + "  -  " + errorMessage);
+          // console.log(error.code + "  -  " + error.message);
           setErrorMessage("User Not Found");
         });
     }
