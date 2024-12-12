@@ -34,12 +34,13 @@ const Body = () => {
       if (user) {
         // console.log("user", user);
         //for sign in
-        const { uid, email, displayName } = user;
+        const { uid, email, displayName, photoURL } = user;
         dispatch(
           addUser({
             uid: uid,
             email: email,
             displayName: displayName,
+            photoURL: photoURL,
           })
         );
       } else {

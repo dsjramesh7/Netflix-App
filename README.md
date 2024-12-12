@@ -11,6 +11,7 @@
 - create a sign up user account
 - implemented sign in user API
 - created redux store with userSlice
+- update profile
 
 # features
 

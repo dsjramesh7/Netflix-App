@@ -8,7 +8,7 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const user = useSelector((state) => state.user);
-  // console.log("user", user);
+  console.log("user", user);
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -31,12 +31,8 @@ const Header = () => {
       />
       {!isLoginPage && (
         <div className="flex gap-2 items-center">
-          <img
-            className="h-12 w-12"
-            alt="user-logo"
-            src="https://avatars.githubusercontent.com/u/84655307?v=4"
-          />
-          {/* <p>{user.displayName}</p> */}
+          <img className="h-12 w-12" alt="user-logo" src={user?.photoURL} />
+          <p>{user?.displayName}</p>
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)
           </button>
