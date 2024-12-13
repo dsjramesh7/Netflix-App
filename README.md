@@ -11,7 +11,14 @@
 - create a sign up user account
 - implemented sign in user API
 - created redux store with userSlice
+- implemented sign out feature
 - update profile
+- fetch from TMDB movies
+- Bug fix: update profile issue and routing
+- unsubscribe to the onAuthStateChanged callback
+- Add hardcoded values to the constant file only
+- register in tmdb api website to get api access token
+- get data from TMDB movies now playing list
 
 # features
 

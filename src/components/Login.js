@@ -6,14 +6,13 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_PROFILE } from "../utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [isToggleSignIn, setIsToggleSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -50,7 +49,7 @@ const Login = () => {
           // console.log(user);
           updateProfile(user, {
             displayName: name.current?.value || "Guest",
-            photoURL: "https://avatars.githubusercontent.com/u/84655307?v=4",
+            photoURL: USER_PROFILE,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -62,9 +61,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-
-              console.log("navigate after update");
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error);
@@ -83,7 +79,6 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           // console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           // console.log(error.code + "  -  " + error.message);
