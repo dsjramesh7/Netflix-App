@@ -19,6 +19,10 @@
 - Add hardcoded values to the constant file only
 - register in tmdb api website to get api access token
 - get data from TMDB movies now playing list
+- custom hook for now playing video as well for movies fetching
+- planing for maincontainer and secondary container
+- updated store for movie trailer video
+- embedded the youtube video to be autoplayed and muted
 
 # features
 
