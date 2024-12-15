@@ -23,6 +23,12 @@
 - planing for maincontainer and secondary container
 - updated store for movie trailer video
 - embedded the youtube video to be autoplayed and muted
+- Build Secondary
+- created movie list
+- created movie card
+- created custom hook for popular movies
+- found out image cdn link to show movie poster
+- focused on making functionality alittle better will improve it in future more better
 
 # features
 
