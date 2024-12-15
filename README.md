@@ -29,6 +29,7 @@
 - created custom hook for popular movies
 - found out image cdn link to show movie poster
 - focused on making functionality alittle better will improve it in future more better
+- gpt search feature
 
 # features
 

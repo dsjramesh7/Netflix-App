@@ -17,9 +17,8 @@ const VideoBackground = ({ movieId, title }) => {
         className="w-screen aspect-video"
         src={`https://www.youtube.com/embed/${movieTrailer?.key}?controls=0&autoplay=1&mute=1&showinfo=0`}
         title={title}
-
-        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        // referrerPolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
     </div>
   );
