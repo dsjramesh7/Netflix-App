@@ -61,18 +61,20 @@ const Header = () => {
   };
 
   return (
-    <div className="px-8 py-2 bg-gradient-to-b from-black h-[10vh] flex justify-between">
-      <img className=" w-44" src={COMPANY_LOGO} alt="netflix-logo" />
+    <div className="absolute top-0 z-50 px-8 py-2 bg-gradient-to-b from-black flex justify-between w-full">
+      <img className="w-44" src={COMPANY_LOGO} alt="netflix-logo" />
       {!isLoginPage && (
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-3 items-center">
           <button
             onClick={handleGPTSearchClick}
             className="bg-blue-400 px-4 py-2 m-2 rounded-lg text-white"
           >
             {gptSearchButton ? "HomePage" : "GPT Search"}
           </button>
-          <img className="h-12 w-12" alt="user-logo" src={user?.photoURL} />
-          <p>{user?.displayName}</p>
+          <div className="flex flex-col text-white text-center gap-1">
+            <img className="h-12 w-12" alt="user-logo" src={user?.photoURL} />
+            <p>{user?.displayName}</p>
+          </div>
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)
           </button>
