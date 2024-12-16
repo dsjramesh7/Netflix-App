@@ -61,7 +61,7 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute top-0 z-50 px-8 py-2 bg-gradient-to-b from-black flex justify-between w-full">
+    <div className="absolute top-0 z-50 px-8 py-2 bg-gradient-to-b from-black flex flex-col items-center w-full sm:flex-row justify-between">
       <img className="w-44" src={COMPANY_LOGO} alt="netflix-logo" />
       {!isLoginPage && (
         <div className="flex gap-3 items-center">
@@ -73,7 +73,7 @@ const Header = () => {
           </button>
           <div className="flex flex-col text-white text-center gap-1">
             <img className="h-12 w-12" alt="user-logo" src={user?.photoURL} />
-            <p>{user?.displayName}</p>
+            {/* <p>{user?.displayName}</p> */}
           </div>
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)

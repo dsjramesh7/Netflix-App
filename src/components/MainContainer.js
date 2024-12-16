@@ -18,7 +18,7 @@ const MainContainer = () => {
 
   const { original_title, overview, id } = mainMovies;
   return (
-    <div>
+    <div className="hidden sm:block">
       <VideoTitle title={original_title} description={overview} />
       <VideoBackground movieId={id} title={original_title} />
     </div>
