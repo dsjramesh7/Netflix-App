@@ -67,7 +67,7 @@ const Header = () => {
         <div className="flex gap-3 items-center">
           <button
             onClick={handleGPTSearchClick}
-            className="bg-blue-400 px-4 py-2 m-2 rounded-lg text-white"
+            className="bg-red-600 px-4 py-2 m-2 rounded-lg text-white"
           >
             {gptSearchButton ? "HomePage" : "GPT Search"}
           </button>
